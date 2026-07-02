@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionInfo
+    displayName="@string/extension_name"
+    id="shortcut-extension"
+    scansDevices="false">
+
+    <DataType
+        typeId="shortcut-field"
+        displayName="@string/data_type_name"
+        description="@string/data_type_desc"
+        graphical="true" />
+
+</ExtensionInfo>
