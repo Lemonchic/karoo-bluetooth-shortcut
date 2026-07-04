@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Karoo Shortcut Extension</string>
-    <string name="extension_name">Shortcut Template</string>
-    <string name="data_type_name">App Shortcut</string>
-    <string name="data_type_desc">Launch application shortcut from in-ride data screen</string>
-    <string name="hello_karoo">Shortcut Extension Template is active! Add the custom shortcut data field to your in-ride screens inside your ride profiles.</string>
+    <string name="app_name">Bluetooth Settings Shortcut</string>
+    <string name="extension_name">Bluetooth Settings Shortcut</string>
+    <string name="data_type_name">BT Settings</string>
+    <string name="data_type_desc">Shortcut to Bluetooth settings screen</string>
+    <string name="hello_karoo">Bluetooth Settings Shortcut is active! Add the BT Settings data field to your ride screens.</string>
 </resources>

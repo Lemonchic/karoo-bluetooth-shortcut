@@ -35,9 +35,9 @@ class ShortcutDataType(private val context: Context) : DataTypeImpl("shortcut-ex
         // val intent = Intent(Intent.ACTION_VIEW, android.net.Uri.parse("https://example.com"))
         // =========================================================================
 
-        // By default, this template launches the system settings panel.
+        // By default, this template launches the Bluetooth settings panel.
         // Change the intent target below to customize the shortcut behavior.
-        val intent = Intent(android.provider.Settings.ACTION_SETTINGS).apply {
+        val intent = Intent(android.provider.Settings.ACTION_BLUETOOTH_SETTINGS).apply {
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
 

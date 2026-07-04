@@ -1,8 +1,10 @@
-# Karoo Shortcut Extension Template
+# Karoo Bluetooth Settings Shortcut (Shortcut Template)
 
-A universal, ready-to-build Android template for creating custom in-ride screen shortcut buttons for the **Hammerhead Karoo / Karoo 2** cycling computers.
+🚴‍♂️ **A custom in-ride screen shortcut button that opens Bluetooth Settings directly on your Hammerhead Karoo / Karoo 2!**
 
-This template contains an offline copy of the Karoo Extensions SDK (`lib-release.aar`), meaning it can be compiled instantly without requiring any GitHub Package Registry credentials.
+By default, this extension adds a clickable in-ride data field labeled **`BT Settings`** to your Karoo. Tapping it opens the Bluetooth settings panel instantly, letting you pair sensors or toggle connections without leaving your ride profiles. 
+
+This repository also serves as a universal, ready-to-build Android template for creating any custom shortcut buttons.
 
 ---
 
@@ -11,7 +13,7 @@ This template contains an offline copy of the Karoo Extensions SDK (`lib-release
 ### 1. Change the Shortcut Command (Target Action / App)
 Open the file [ShortcutDataType.kt](file:///app/src/main/kotlin/com/example/karoo/shortcut/extension/ShortcutDataType.kt) and locate the `startView` method.
 
-Customize the `intent` definition:
+By default, this template is configured to use **Option A** (Bluetooth Settings). You can change the `intent` definition to target other actions:
 
 *   **Option A: Launch a system settings screen (e.g., Bluetooth Settings)**
     ```kotlin
@@ -41,7 +43,7 @@ Replace the vector drawable file at `app/src/main/res/drawable/ic_shortcut.xml` 
 
 #### Change the In-Ride Data Field Layout (Label & Color)
 Open the layout file [shortcut_field.xml](file:///app/src/main/res/layout/shortcut_field.xml) and customize:
-*   `android:text="Launch App"` to change the text label.
+*   `android:text="BT Settings"` to change the text label.
 *   `android:background="#1A1A1A"` to change the cell background color.
 *   `android:src="@drawable/ic_shortcut"` to change the icon inside the cell.
 
@@ -64,8 +66,8 @@ To install multiple shortcut extensions side-by-side, each extension must have a
 Run the following command in the root folder of the project to compile the app and install it directly to your USB-connected Karoo device:
 
 ```powershell
-# Using the local Gradle wrapper (highly recommended to prevent version mismatches)
-.\gradlew assembleDebug; adb install -r app/build/outputs/apk/debug/app-debug.apk
+# Compile the app and install it directly using local Gradle and ADB
+gradle assembleDebug; adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 
-Once installed, go to **Settings -> Profiles**, select/edit a profile, and add your new shortcut data field to an in-ride screen!
+Once installed, go to **Settings -> Profiles**, select/edit a profile, and add your new **BT Settings** data field to an in-ride screen!
